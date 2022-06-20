@@ -1,0 +1,37 @@
+   50  cd RICE-FINTECH-02_Challenge
+   51  touch app.py
+   52  mkdir data
+   53  mkdir qualifiers
+   54  cd qualifiers
+   55  mkdir filters
+   56  mkdir utils
+   57  cd '/Users/RishiPrasadha/Desktop/FinTech-Workspace/RICE-FINTECH-ATM_app'
+   58  npm run generate
+   59  pwd 
+   60  cd ..
+   61  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge
+   62  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/01_Challenge
+   63  conda activate dev
+   64  python loan_analyzer.py
+   65  conda activate dev
+   66  python loan_analyzer.py
+   67* /usr/local/bin/python3
+   68  python3 loan_analyzer.py
+   69  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge/loan_qualifier_app
+   70  python3 app.py
+   71  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge
+   72  git status
+   73  git add -A
+   74  git status
+   75  git commit -m "imported challenge files into repository. Started working on save_qualifying_loans; added questionary input, and writing structure to save data into CSV file."
+   76  git status
+   77  git push
+   78  cd loan_qualifier_app
+   79  python3 app.py
+   80  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge
+   81  history 50 > terminal_history.txt
+   82  python3 app.py
+   83  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge/loan_qualifier_app
+   84  python3 app.py
+   85  conda deactivate
+   86  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge

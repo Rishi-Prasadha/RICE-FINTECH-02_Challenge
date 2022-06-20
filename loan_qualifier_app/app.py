@@ -6,6 +6,7 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+import csv
 import sys
 import fire
 import questionary
@@ -110,22 +111,34 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-    header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
-    output_path = Path("./qualifying_loans.csv")
-    
-    confirm_save = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
-    #print(confirm_save)
-    
-    if confirm_save == True:
-        with open(output_path, "w") as csvfile:
-            csvwriter = csv.writer(csvfile, delimiter=",")
-            csvwriter.writerow(header)
-            for loan in qualifying_loans:
-                csvwriter.writerow(loan)
-    else:
-        print("Your qualifying loans will not be saved, thank you for your time")
-        sys.exit()
 
+    #Prompts the user on whether he/she would like to save list of loans into a file
+    confirm_save = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
+    
+    #If the user wants to save file then it will check if qualifying loans exist
+    if confirm_save == True:
+        
+        #Checks if qualifying loans is empty. If not empty, will save to a CSV file
+        if qualifying_loans:
+
+            #Defines header for CSV output file
+            header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
+        
+            #Asks user to define output path on where CSV file will be saved
+            output_path = Path(questionary.text("Please input the desired path to save your qualifying loans:").ask())
+
+            #Opens a new file to write to, writes qualifying loans list into CSV file 
+            with open(output_path, "w") as csvfile:
+                csvwriter = csv.writer(csvfile, delimiter=",")
+                csvwriter.writerow(header)
+                for loan in qualifying_loans:
+                    csvwriter.writerow(loan)
+        else:
+            print("There are no loans that you qualify for. Please try again at a later date.")
+            sys.exit()
+    else: 
+        print("Your qualifying loans will not be saved, thank you for your time.")
+        sys.exit()
 
 def run():
     """The main function for running the script."""
