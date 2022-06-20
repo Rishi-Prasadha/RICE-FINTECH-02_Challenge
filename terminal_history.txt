@@ -35,3 +35,9 @@
    84  python3 app.py
    85  conda deactivate
    86  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge
+   87  history 50 > terminal_history.txt
+   88  git status 
+   89  git add -A
+   90  git status
+   91  git commit -m "Wrote out the README to explain the program and its uses and requirements. Edited save_qualifying_loans function to add additional usability with asking if they want to save and to check if a qualifying loans exist."
+   92  git push
