@@ -102,6 +102,22 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
+def save_csv(output_path, qualifying_loans):
+    #Takes a path defined by user and writes qualifying loans into CSV file
+    #
+    #Args:
+    #    qualifying_loans (list of lists): The qualifying bank loans.
+
+    #Defines header for CSV output file
+    header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
+
+    #Opens a new file to write to, writes qualifying loans list into this CSV file 
+    with open(output_path, "w") as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=",")
+        csvwriter.writerow(header)
+        for loan in qualifying_loans:
+            csvwriter.writerow(loan)
+
 
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
@@ -114,25 +130,17 @@ def save_qualifying_loans(qualifying_loans):
 
     #Prompts the user on whether he/she would like to save list of loans into a file
     confirm_save = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
-    
-    #If the user wants to save file then it will check if qualifying loans exist
+   
+    #If the user wants to save file then it will check if qualifying loans exist/is not empty
     if confirm_save == True:
         
         #Checks if qualifying loans is empty. If not empty, will save to a CSV file
         if qualifying_loans:
-
-            #Defines header for CSV output file
-            header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
-        
             #Asks user to define output path on where CSV file will be saved
             output_path = Path(questionary.text("Please input the desired path to save your qualifying loans:").ask())
-
-            #Opens a new file to write to, writes qualifying loans list into CSV file 
-            with open(output_path, "w") as csvfile:
-                csvwriter = csv.writer(csvfile, delimiter=",")
-                csvwriter.writerow(header)
-                for loan in qualifying_loans:
-                    csvwriter.writerow(loan)
+            save_csv(output_path, qualifying_loans)
+            print("Your qualifying loans have been saved, thank you!")
+            
         else:
             print("There are no loans that you qualify for. Please try again at a later date.")
             sys.exit()

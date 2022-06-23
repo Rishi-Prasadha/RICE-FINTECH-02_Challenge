@@ -15,7 +15,7 @@
    64  python loan_analyzer.py
    65  conda activate dev
    66  python loan_analyzer.py
-   67* /usr/local/bin/python3
+   67  /usr/local/bin/python3
    68  python3 loan_analyzer.py
    69  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge/loan_qualifier_app
    70  python3 app.py
@@ -41,3 +41,46 @@
    90  git status
    91  git commit -m "Wrote out the README to explain the program and its uses and requirements. Edited save_qualifying_loans function to add additional usability with asking if they want to save and to check if a qualifying loans exist."
    92  git push
+   93  history 50 > terminal_history.txt
+   94  git add - A
+   95  git add -A
+   96  git commit -m "Created a new terminal_history.txt to reflect most recent changes"
+   97  git push origin main
+   98  conda activate dev
+   99  jupyter lab
+  100  cd/Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Practice
+  101  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Practice
+  102  jupyter lab
+  103  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/RICE-VIRT-FIN-PT-06-2022-U-B-main
+  104  conda deactivate
+  105  mkdir 03-Financial-Analysis-with-Pandas
+  106  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Practice
+  107  conda activate dev
+  108  jupyter lab
+  109  conda activate dev
+  110  jupyter lab
+  111  conda deactivate
+  112  conda activate dev
+  113  jupyter lab
+  114  pwd
+  115  cd Desktop/FinTech-Workspace
+  116  cd /Users/RishiPrasadha/Desktop/FinTech-Workspace/Module_Challenges/RICE-FINTECH-02_Challenge
+  117  /usr/local/bin/python3
+  118  cd loan_qualifier_app
+  119  conda activate dev
+  120  python app.py
+  121  conda activate dev
+  122  python app.py
+  123  cd Module_Challenges/RICE-FINTECH-02_Challenge
+  124  conda activate dev
+  125  python app.py
+  126  cd loan_qualifier_app
+  127  python app.py
+  128  pip install fire
+  129  pip install questionary
+  130  python app.py
+  131  cd ..
+  132  git status
+  133  cd loan_qualifier_app
+  134  python app.py
+  135  cd ..
