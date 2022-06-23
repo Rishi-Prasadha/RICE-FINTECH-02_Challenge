@@ -84,3 +84,8 @@
   133  cd loan_qualifier_app
   134  python app.py
   135  cd ..
+  136  history 50 > terminal_history.txt
+  137  git status
+  138  git add -A
+  139  git commit -m "Added save_csv function, cleaned up comments and save_qualifying_loans function"
+  140  git push
